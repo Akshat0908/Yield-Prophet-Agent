@@ -255,7 +255,7 @@ const DeFiDashboard = () => {
         <CardContent>
           <PerformanceGraph />
         </CardContent>
-      </div>
+      </Card>
     </div>
   );
 };
