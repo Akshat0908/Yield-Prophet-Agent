@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { TrendingUp, TrendingDown, Zap, ShieldCheck, DollarSign } from 'lucide-react';
+import { TrendingUp, Zap, ShieldCheck, DollarSign } from 'lucide-react';
 import YieldComparisonTable from './YieldComparisonTable';
 import PortfolioChart from './PortfolioChart';
 import PerformanceGraph from './PerformanceGraph';
@@ -128,7 +128,7 @@ const DeFiDashboard = () => {
         <CardContent>
           <PerformanceGraph />
         </CardContent>
-      </div>
+      </Card>
     </div>
   );
 };
