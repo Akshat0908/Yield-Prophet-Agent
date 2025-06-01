@@ -10,6 +10,7 @@ import PerformanceGraph from './PerformanceGraph';
 import WalletConnection from '../wallet/WalletConnection';
 import { moveAgentService, YieldData, PortfolioAllocation, RebalancingResult } from '../../services/moveAgentKit';
 import { mockPortfolioData, mockPredictions } from '../../data/mockData';
+import { transformYieldDataToProtocolData } from '../../utils/dataTransformers';
 
 const DeFiDashboard = () => {
   const [totalValue, setTotalValue] = useState(125450);
@@ -100,6 +101,11 @@ const DeFiDashboard = () => {
     setWalletAddress('');
     setProtocolData([]);
   };
+
+  // Transform yield data to protocol data format for the table
+  const transformedProtocolData = protocolData.length > 0 
+    ? transformYieldDataToProtocolData(protocolData) 
+    : [];
 
   return (
     <div className="space-y-6">
@@ -225,7 +231,7 @@ const DeFiDashboard = () => {
           </CardHeader>
           <CardContent>
             <YieldComparisonTable 
-              data={protocolData.length > 0 ? protocolData : []} 
+              data={transformedProtocolData} 
               predictions={mockPredictions} 
             />
           </CardContent>
@@ -249,7 +255,7 @@ const DeFiDashboard = () => {
         <CardContent>
           <PerformanceGraph />
         </CardContent>
-      </Card>
+      </div>
     </div>
   );
 };
