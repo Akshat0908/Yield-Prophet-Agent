@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import DeFiDashboard from '../components/dashboard/DeFiDashboard';
 import CrystalBallInterface from '../components/crystal/CrystalBallInterface';
 import { Button } from '@/components/ui/button';
-import { TrendingUp, Crystal } from 'lucide-react';
+import { TrendingUp, Gem } from 'lucide-react';
 
 const Index = () => {
   const [activeInterface, setActiveInterface] = useState<'defi' | 'crystal'>('defi');
@@ -17,7 +17,7 @@ const Index = () => {
             <div className="flex items-center space-x-3">
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                  <Crystal className="w-6 h-6 text-white" />
+                  <Gem className="w-6 h-6 text-white" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               </div>
@@ -41,7 +41,7 @@ const Index = () => {
                 onClick={() => setActiveInterface('crystal')}
                 className="flex items-center space-x-2"
               >
-                <Crystal className="w-4 h-4" />
+                <Gem className="w-4 h-4" />
                 <span>Crystal Ball</span>
               </Button>
             </div>

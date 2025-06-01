@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Crystal, Sparkles, TrendingUp, Twitter } from 'lucide-react';
+import { Gem, Sparkles, TrendingUp, Twitter } from 'lucide-react';
 import SentimentClouds from './SentimentClouds';
 import PredictionOrb from './PredictionOrb';
 import { mockSentimentData, mockPredictions } from '../../data/mockData';
@@ -36,7 +35,7 @@ const CrystalBallInterface = () => {
         {/* Mystical Header */}
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center space-x-2">
-            <Crystal className="w-8 h-8 text-purple-400 animate-pulse" />
+            <Gem className="w-8 h-8 text-purple-400 animate-pulse" />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               The Yield Oracle
             </h1>
@@ -78,7 +77,7 @@ const CrystalBallInterface = () => {
           <Card className="bg-gradient-to-br from-cyan-900/50 to-purple-900/50 border-cyan-500/30 backdrop-blur-lg">
             <CardHeader>
               <CardTitle className="text-cyan-100 flex items-center justify-center">
-                <Crystal className="w-5 h-5 mr-2 animate-pulse" />
+                <Gem className="w-5 h-5 mr-2 animate-pulse" />
                 The Crystal Ball
               </CardTitle>
             </CardHeader>
